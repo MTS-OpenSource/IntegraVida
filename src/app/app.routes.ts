@@ -1,3 +1,6 @@
 import { Routes } from '@angular/router';
-
-export const routes: Routes = [];
+import { Navbar } from './shared/navbar/navbar'
+export const routes: Routes = [
+  {path: '', redirectTo:'landing', pathMatch: 'full'},
+  {path:'landing', component: Navbar},
+];
