@@ -1,0 +1,17 @@
+.btn-primary {
+  background-color: #FF6B35;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #FF6B35;
+  border: 2px solid #FF6B35;
+  border-radius: 25px;
+  padding: 12px 30px;
+  cursor: pointer;
+}

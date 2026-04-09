@@ -1,0 +1,23 @@
+html{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #725f58;
+  padding: 2rem;
+  margin: 0;
+  border: 0;
+}
+.text-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.buttons-nav{
+  display: flex;
+}
