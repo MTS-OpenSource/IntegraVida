@@ -10,6 +10,8 @@ export class LanguageService {
       servicios: 'Servicios',
       nosotros: 'Sobre Nosotros',
       contactanos: 'Contáctanos',
+      sesion: 'Iniciar Sesion',
+      registro: 'Registro',
       heroTitle: 'La plataforma clínica que transforma el control de la diabetes',
     },
     en: {
@@ -17,6 +19,8 @@ export class LanguageService {
       servicios: 'Services',
       nosotros: 'About Us',
       contactanos: 'Contact Us',
+      sesion: 'Login',
+      registro: 'Register',
       heroTitle: 'The clinical platform that transforms diabetes management',
     }
   };

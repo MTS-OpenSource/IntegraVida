@@ -1,13 +1,15 @@
 <nav>
   <section class="text-nav">
     <h1>GlucoSmart</h1>
-    <h3>{{ langService.translate('inicio') }}</h3>
-    <h3>{{ langService.translate('servicios') }}</h3>
-    <h3>{{ langService.translate('nosotros') }}</h3>
-    <h3  n >{{ langService.translate('contactanos') }}</h3>
+    <a href="">
+      <h3>{{ langService.translate('inicio') }}</h3>
+    </a>
+    <a href=""><h3>{{ langService.translate('servicios') }}</h3></a>
+    <a href=""><h3>{{ langService.translate('nosotros') }}</h3></a>
+    <a href=""><h3>{{ langService.translate('contactanos') }}</h3></a>
   </section>
   <section class="buttons-nav">
-    <app-button text="Iniciar Sesión" type="secondary" />
-    <app-button text="Registrarse" type="primary" />
+    <app-button [text]="langService.translate('sesion')" type="secondary" />
+    <app-button [text]="langService.translate('registro')" type="primary" />
   </section>
 </nav>
