@@ -13,6 +13,9 @@ export class LanguageService {
       sesion: 'Iniciar Sesion',
       registro: 'Registro',
       heroTitle: 'La plataforma clínica que transforma el control de la diabetes',
+      heroTexto: 'GlucoSmart centraliza tu información médica, conecta con especialistas y utiliza IA para predecir tendencias, ofreciendo un cuidado proactivo y personalizado.',
+      comenzar: 'Comenzar Ahora',
+      service: 'Servicios',
     },
     en: {
       inicio: 'Home',
@@ -22,6 +25,9 @@ export class LanguageService {
       sesion: 'Login',
       registro: 'Register',
       heroTitle: 'The clinical platform that transforms diabetes management',
+      heroTexto: 'GlucoSmart centralizes your medical information, connects with specialists and uses AI to predict trends, offering proactive and personalized care.',
+      comenzar: 'Start Now',
+      service: 'Services',
     }
   };
 

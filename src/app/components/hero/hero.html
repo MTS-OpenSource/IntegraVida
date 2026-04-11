@@ -1,1 +1,10 @@
-<p>hero works!</p>
+<section class="hero">
+  <div class="hero-img">
+    <img src="./assets/diabetes-diagnostico-3.jpg">
+  </div>
+  <div class="hero-text">
+    <h2>{{ langService.translate('heroTitle') }}</h2>
+    <p>{{ langService.translate('heroTexto') }}</p>
+    <app-button [text]="langService.translate('comenzar')" type="primary" />
+  </div>
+</section>
