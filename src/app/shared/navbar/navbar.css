@@ -40,5 +40,5 @@ nav {
 .buttons-nav{
   display: flex;
   align-content: center;
-  gap: 2rem;
+  gap: 2.0rem;
 }
