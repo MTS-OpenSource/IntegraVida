@@ -2,11 +2,11 @@
   margin-top: -70px;
   padding-top: 0;
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  height: 100.0vh;
 }
 .hero-img img {
   width: 100%;
-  height: 50vh;
+  height: 50.0vh;
   object-fit: cover;
   display: block;
 }
