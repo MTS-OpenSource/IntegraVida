@@ -12,3 +12,4 @@ import {ButtonComponent} from '../button/button';
 export class Navbar {
   constructor(public langService: LanguageService) {}
 }
+
