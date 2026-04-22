@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { Navbar } from './shared/navbar/navbar'
-import {App} from './app';
+import {Pages} from './pages/pages/pages';
+
 export const routes: Routes = [
   {path: '', redirectTo:'landing', pathMatch: 'full'},
-  {path:'landing', component: App},
+  {path:'landing', component: Pages},
 ];
