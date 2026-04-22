@@ -1,10 +1,21 @@
 <section class="hero">
-  <div class="hero-img">
-    <img src="./assets/diabetes-diagnostico-3.jpg">
+  <div class="hero-img-container">
+    <img src="./assets/diabetes-diagnostico-3.jpg" class="main-bg" alt="Hero Image">
+    <div class="overlay"></div>
+
+    <div class="nav-wrapper">
+      <app-navbar></app-navbar>
+    </div>
   </div>
-  <div class="hero-text">
-    <h2>{{ langService.translate('heroTitle') }}</h2>
-    <p>{{ langService.translate('heroTexto') }}</p>
-    <app-button [text]="langService.translate('comenzar')" type="primary" />
+
+  <div class="hero-text-area">
+    <div class="content">
+      <h1>{{ langService.translate('heroTitle') }}</h1>
+      <p>{{ langService.translate('heroTexto') }}</p>
+
+      <button class="btn-primary">
+        {{ langService.translate('comenzar') }}
+      </button>
+    </div>
   </div>
 </section>
