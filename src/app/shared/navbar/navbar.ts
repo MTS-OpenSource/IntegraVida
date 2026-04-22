@@ -10,5 +10,6 @@ import {ButtonComponent} from '../button/button';
   styleUrl: './navbar.css',
 })
 export class Navbar {
-  constructor(public langService: LanguageService) {}
+  constructor(public langService: LanguageService) {
+  }
 }

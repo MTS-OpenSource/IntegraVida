@@ -1,15 +1,13 @@
 nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding: 1rem;
-  margin: 0;
-  border: 0;
+  align-items: center;
+  padding: 20px 50px;
+  background: transparent;
+  position: absolute;
   width: 100%;
-  box-sizing: border-box;
-  position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 .text-nav{
   display: flex;
@@ -40,5 +38,5 @@ nav {
 .buttons-nav{
   display: flex;
   align-content: center;
-  gap: 2rem;
+  gap: 2.0rem;
 }

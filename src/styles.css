@@ -3,9 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 body {
   width: 100%;
-  overflow-x: hidden; /* evita scroll horizontal */
+  overflow-x: hidden;
+  background-color: #f8f9fa; /* Un gris casi blanco de fondo ayuda a que el diseño respire */
 }

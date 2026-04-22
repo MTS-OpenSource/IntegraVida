@@ -1,1 +1,102 @@
-<p>contact works!</p>
+<section class="contact-section">
+  <div class="contact-card">
+    <div class="contact-info">
+      <h2>{{ langService.translate('contactTitle') }}</h2>
+      <p class="contact-subtitle">{{ langService.translate('contactSubtitle') }}</p>
+
+      <div class="contact-items">
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <img src="assets/email-svgrepo-com.svg" width="30px" height="30px">
+          </div>
+          <div>
+            <p class="contact-label">{{ langService.translate('emailLabel') }}</p>
+            <p class="contact-value">hola&#64;glucosmart.com</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <img src="assets/call-svgrepo-com.svg" width="30px" height="30px">
+          </div>
+          <div>
+            <p class="contact-label">{{ langService.translate('phoneLabel') }}</p>
+            <p class="contact-value">+52 (555) 123-4567</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <img src="assets/map-point-svgrepo-com.svg " width="30px" height="30px">
+          </div>
+          <div>
+            <p class="contact-label">{{ langService.translate('locationLabel') }}</p>
+            <p class="contact-value">{{ langService.translate('locationValue') }}</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="contact-form-container">
+      <form class="contact-form" (ngSubmit)="submitContactForm()">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>{{ langService.translate('nameLabel') }}</label>
+            <input
+              type="text"
+              [placeholder]="langService.translate('namePlaceholder')"
+              [(ngModel)]="formData.name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>{{ langService.translate('emailFormLabel') }}</label>
+            <input
+              type="email"
+              placeholder="email@ejemplo.com"
+              [(ngModel)]="formData.email"
+              name="email"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>{{ langService.translate('interestLabel') }}</label>
+          <select [(ngModel)]="formData.interest" name="interest" required>
+            <option value="" disabled selected>Selecciona una opcion</option>
+            <option [value]="langService.translate('option1')">{{ langService.translate('option1') }}</option>
+            <option [value]="langService.translate('option2')">{{ langService.translate('option2') }}</option>
+            <option [value]="langService.translate('option3')">{{ langService.translate('option3') }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>{{ langService.translate('messageLabel') }}</label>
+          <textarea
+            rows="4"
+            [placeholder]="langService.translate('messagePlaceholder')"
+            [(ngModel)]="formData.message"
+            name="message"
+            required
+          ></textarea>
+        </div>
+
+        @if (submitStatus()) {
+          <p class="form-status" [class.error]="submitStatus() === 'error'">
+            {{ getStatusMessage() }}
+          </p>
+        }
+
+        <button type="submit" class="submit-btn" [disabled]="isSending()">
+          {{ isSending() ? 'Enviando...' : langService.translate('submitBtn') }}
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>

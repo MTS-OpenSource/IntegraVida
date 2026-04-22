@@ -1,5 +1,5 @@
 .btn-primary {
-  background-color: #E05C37;
+  background-color: #E7603C;
   color: white;
   border: none;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.22);
@@ -7,7 +7,8 @@
   padding: 12px 30px;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 .btn-secondary {
@@ -20,4 +21,5 @@
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  font-size: 1.1rem;
 }

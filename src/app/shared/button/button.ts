@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -11,4 +11,9 @@ import { NgClass } from '@angular/common';
 export class ButtonComponent {
   @Input() text: string = 'Click me';
   @Input() type: string = 'primary';
+  @Output() pressed = new EventEmitter<void>();
+
+  onClick(): void {
+    this.pressed.emit();
+  }
 }
