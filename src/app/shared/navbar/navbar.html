@@ -9,6 +9,11 @@
     <a href=""><h3>{{ langService.translate('contactanos') }}</h3></a>
   </section>
   <section class="buttons-nav">
+    <app-button
+      [text]="langService.currentLang() === 'es' ? 'EN' : 'ES'"
+      (pressed)="langService.toggleLanguage()"
+      type="primary"
+    />
     <app-button [text]="langService.translate('sesion')" type="secondary" />
     <app-button [text]="langService.translate('registro')" type="primary" />
   </section>
