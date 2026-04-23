@@ -43,6 +43,12 @@ export class LanguageService {
       historialMedico: 'Historial Médico',
       convertidorPdf: 'Convertidor a PDF',
       controlDatos: 'Control de Datos',
+      sobreNosotros: 'Sobre Nosotros',
+      descripcionGeneral: 'En GlucoSmart ayudamos a centralizar y organizar toda la información clínica de pacientes con diabetes, facilitando el seguimiento, la gestión y la toma de decisiones médicas de manera confiable y eficiente.',
+      mision: 'Misión',
+      misionTexto: 'Gestionar de manera integral la información clínica de pacientes con diabetes, facilitando el seguimiento y la toma de decisiones médicas.',
+      vision: 'Visión',
+      visionTexto: 'Ser un referente en soluciones digitales de salud que optimicen el manejo de la diabetes y mejoren la calidad de vida de los pacientes.',
     },
     en: {
       inicio: 'Home',
@@ -80,6 +86,12 @@ export class LanguageService {
       historialMedico: 'Medical Records',
       convertidorPdf: 'PDF Converter',
       controlDatos: 'Data Control',
+      sobreNosotros: 'About Us',
+      descripcionGeneral: 'At GlucoSmart, we help centralize and organize all clinical information for diabetes patients, facilitating reliable and efficient monitoring, management, and medical decision-making.',
+      mision: 'Mission',
+      misionTexto: 'Integrally manage the clinical information of diabetes patients, facilitating monitoring and medical decision-making.',
+      vision: 'Vision',
+      visionTexto: 'To be a leader in digital health solutions that optimize diabetes management and improve patients\' quality of life.',
     }
   };
 
