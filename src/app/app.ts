@@ -1,6 +1,5 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Navbar } from './shared/navbar/navbar';
 import { Hero } from './components/hero/hero';
 
 @Component({
@@ -8,7 +7,6 @@ import { Hero } from './components/hero/hero';
   standalone: true, // Asegúrate de que esto esté si usas Angular moderno
   imports: [
     RouterOutlet,
-    Navbar,
     Hero
   ],
   templateUrl: './app.html',
