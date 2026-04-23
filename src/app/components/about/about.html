@@ -1,1 +1,21 @@
-<p>about works!</p>
+<section id="nosotros-section" class="about-section">
+  <h2 class="about-title">{{ langService.translate('sobreNosotros') }}</h2>
+
+  <div class="about-container">
+    <div class="about-main-card">
+      <p>{{ langService.translate('descripcionGeneral') }}</p>
+    </div>
+
+    <div class="values-container">
+      <div class="value-card">
+        <h3>{{ langService.translate('mision') }}</h3>
+        <p>{{ langService.translate('misionTexto') }}</p>
+      </div>
+
+      <div class="value-card">
+        <h3>{{ langService.translate('vision') }}</h3>
+        <p>{{ langService.translate('visionTexto') }}</p>
+      </div>
+    </div>
+  </div>
+</section>
