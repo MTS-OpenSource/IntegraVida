@@ -1,1 +1,24 @@
-<p>testimonials works!</p>
+<section id="testimonios-section" class="testimonials-section">
+  <div class="decor-circle circle-1"></div>
+  <div class="decor-circle circle-2"></div>
+  <div class="decor-circle circle-3"></div>
+
+  <h2 class="section-title">{{ langService.translate('testimoniosTitulo') }}</h2>
+  <p class="section-subtitle">{{ langService.translate('testimoniosSubtitulo') }}</p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card" *ngFor="let t of testimonios">
+      <div class="card-header">
+        <img [src]="t.foto" [alt]="t.nombre" class="user-photo">
+        <div class="user-info">
+          <h4>{{ t.nombre }}</h4>
+          <span>{{ t.lugar }}</span>
+        </div>
+      </div>
+      <p class="testimonial-text">
+        {{ langService.translate(t.texto) }}
+      </p>
+      <div class="stars">★★★★★</div>
+    </div>
+  </div>
+</section>
