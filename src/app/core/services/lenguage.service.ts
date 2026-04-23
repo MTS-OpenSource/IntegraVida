@@ -54,7 +54,10 @@ export class LanguageService {
       testimonioCarlos: 'GlucoSmart me ayuda a llevar un control preciso de mi glucosa y medicamentos. Ahora puedo seguir mi tratamiento sin preocuparme por olvidar nada.',
       testimonioAndrea: 'Puedo acceder a la información de mis pacientes de forma rápida y organizada, lo que mejora la calidad de mis decisiones clínicas.',
       testimonioAndres: 'Gracias a GlucoSmart puedo monitorear la salud de mi mamá desde casa y asegurarme de que sigue su tratamiento correctamente.',
-      terminosCondiciones: 'Términos y condiciones'
+      terminosCondiciones: 'Términos y condiciones',
+      option1: 'Diagnóstico Avanzado',
+      option2: 'Planes de Monitoreo',
+      option3: 'Consulta Especializada'
     },
     en: {
       inicio: 'Home',
@@ -103,7 +106,10 @@ export class LanguageService {
       testimonioCarlos: 'GlucoSmart helps me keep precise control of my glucose and medications. Now I can follow my treatment without worrying about forgetting anything.',
       testimonioAndrea: 'I can access my patients\' information quickly and in an organized way, which improves the quality of my clinical decisions.',
       testimonioAndres: 'Thanks to GlucoSmart, I can monitor my mom\'s health from home and make sure she follows her treatment correctly.',
-      terminosCondiciones: 'Terms and Conditions'
+      terminosCondiciones: 'Terms and Conditions',
+      option1: 'Advanced Diagnosis',
+      option2: 'Monitoring Plans',
+      option3: 'Specialized Consultation'
     }
   };
 
