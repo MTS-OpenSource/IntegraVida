@@ -1,59 +1,143 @@
-# IntegraVida
+# IntegraVida Landing Page
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+Landing page for IntegraVida, a healthcare-focused web experience centered on diabetes care and patient contact. The project is built with Angular 21 and currently exposes a single-page landing flow designed for static deployment on GitHub Pages.
 
-## Development server
+## Tech Stack
 
-To start a local development server, run:
+- Angular 21 with standalone components
+- TypeScript
+- HTML templates and component-scoped CSS
+- Angular Router
+- Signals for lightweight state handling
+- GitHub Actions for GitHub Pages deployment
 
-```bash
-ng serve
+## Project focus
+
+The current implementation is oriented around a simple landing experience with:
+
+- A root route that loads the landing directly
+- Reusable UI sections for navigation, hero, and contact
+- A lightweight language service with Spanish and English labels
+- Static deployment support for GitHub Pages
+
+## Current structure
+
+```text
+IntegraVida/
+├── .github/
+│   └── workflows/
+│       └── static.yml                 # Automatic deploy to GitHub Pages
+├── public/                            # Static public assets
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── about/
+│   │   │   ├── contact/
+│   │   │   ├── hero/
+│   │   │   ├── services/
+│   │   │   └── testimonials/
+│   │   ├── core/
+│   │   │   └── services/
+│   │   │       └── lenguage.service.ts
+│   │   ├── pages/
+│   │   │   ├── landing/
+│   │   │   └── pages/
+│   │   ├── shared/
+│   │   │   ├── button/
+│   │   │   ├── footer/
+│   │   │   └── navbar/
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+│   │   └── app.ts
+│   ├── assets/                        # Images and SVG assets used by the landing
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
+├── angular.json
+├── package.json
+└── README.md
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Routing
 
-## Code scaffolding
+The app is configured so the root path loads the landing directly:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `/` -> landing page
 
-```bash
-ng generate component component-name
-```
+This avoids redirect issues and works better with GitHub Pages static hosting.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Internationalization
 
-```bash
-ng generate --help
-```
+The project currently includes a simple in-app language service:
 
-## Building
+- Default language: Spanish
+- Secondary language: English
+- Translation values are defined in `src/app/core/services/lenguage.service.ts`
 
-To build the project run:
+## Local development
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Install dependencies:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Start the dev server:
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Then open:
 
-## Additional Resources
+```text
+http://localhost:4200
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Production build
+
+Run the standard production build:
+
+```bash
+npx ng build
+```
+
+The output is generated in:
+
+```text
+dist/IntegraVida
+```
+
+## GitHub Pages deployment
+
+The repository is configured to deploy with GitHub Actions using:
+
+- `.github/workflows/static.yml`
+
+The workflow:
+
+- installs dependencies with `npm ci`
+- builds the app for GitHub Pages
+- publishes the static browser output
+- creates a `404.html` fallback for SPA routing
+
+To trigger deployment:
+
+```bash
+git push origin development
+```
+
+or:
+
+```bash
+git push origin main
+```
+
+In GitHub repository settings, Pages should be configured to use:
+
+- `Source` -> `GitHub Actions`
+
+## Notes
+
+- The project currently includes additional sections and shared components that can be wired into the landing as it evolves.
+- Since GitHub Pages is static hosting, deployment is configured around a static output instead of a server runtime.
