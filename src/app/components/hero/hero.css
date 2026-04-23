@@ -1,30 +1,53 @@
 .hero {
-  margin-top: -70px;
+  width: 100%;
+  margin-top: 0;
   padding-top: 0;
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.hero-img img {
-  width: 100%;
-  height: 50vh;
+.main-bg {
+  width: 100vw;      /* Ocupa todo el ancho de la pantalla */
+  height: 60vh;      /* Altura de la imagen */
   object-fit: cover;
   display: block;
 }
-.hero-text{
+
+.hero-img-container {
+  position: relative;
+  width: 100%;
+}
+
+.hero-text-area {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
-  gap: 2.5rem;
+  padding: 4rem 2rem; /* Bajamos el padding de 10rem que era mucho */
+  background-color: white;
+  text-align: center;
 }
-.hero-text h2 {
+
+.content h1 {
   font-size: 3rem;
-  width: 34%;
-  text-align: center;
+  font-weight: 550;
+  width: 70%;
+  margin: 0 auto 1.5rem auto;
 }
-.hero-text p {
+
+.content p {
   font-size: 1.5rem;
-  text-align: center;
-  width: 40%;
+  width: 60%;
+  margin: 0 auto 2rem auto;
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #f06a4c;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
