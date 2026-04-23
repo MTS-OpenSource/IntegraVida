@@ -5,6 +5,7 @@ import {Navbar} from "../../shared/navbar/navbar";
 import { Services } from '../../components/services/services';
 import { About } from '../../components/about/about';
 import { Testimonials } from '../../components/testimonials/testimonials';
+import { Footer } from '../../shared/footer/footer';
 
 @Component({
   selector: 'app-pages',
@@ -14,7 +15,8 @@ import { Testimonials } from '../../components/testimonials/testimonials';
       Services,
       About,
       Testimonials,
-      Contact
+      Contact,
+      Footer
     ],
   templateUrl: './pages.html',
   styleUrl: './pages.css',
