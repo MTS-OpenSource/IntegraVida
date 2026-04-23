@@ -7,8 +7,8 @@
   flex-direction: column;
 }
 .main-bg {
-  width: 100vw;      /* Ocupa todo el ancho de la pantalla */
-  height: 60vh;      /* Altura de la imagen */
+  width: 100vw;
+  height: 60vh;
   object-fit: cover;
   display: block;
 }
@@ -23,7 +23,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem; /* Bajamos el padding de 10rem que era mucho */
+  padding: 4rem 2rem;
   background-color: white;
   text-align: center;
 }

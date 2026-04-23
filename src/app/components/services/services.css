@@ -1,0 +1,110 @@
+.services-section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #D7F0ED;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-title {
+  font-weight: 500;
+  font-size: 2.7rem;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.service-card {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  z-index: 2;
+}
+
+.card-text-overlay h3 {
+  font-weight: 500;
+  font-size: 2.3rem;
+  color: white;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.carousel-control {
+  background-color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-control:hover {
+  background-color: #f0f0f0;
+}
+
+.arrow-icon {
+  font-size: 2rem;
+  color: #a0c4c4;
+  font-weight: 300;
+}
+
+.top-left {
+  top: -150px;
+  left: -200px;
+}
+
+.bottom-right {
+  bottom: -200px;
+  right: -250px;
+}
