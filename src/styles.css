@@ -11,3 +11,7 @@ body {
   overflow-x: hidden;
   background-color: #f8f9fa; /* Un gris casi blanco de fondo ayuda a que el diseño respire */
 }
+
+html {
+  scroll-behavior: smooth;
+}
