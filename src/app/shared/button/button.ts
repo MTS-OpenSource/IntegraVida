@@ -14,6 +14,6 @@ export class ButtonComponent {
   @Output() pressed = new EventEmitter<void>();
 
   onClick(): void {
-    this.pressed.emit();
+    window.location.href = 'https://integravida-appweb.web.app/';
   }
 }
