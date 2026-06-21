@@ -1,32 +1,31 @@
 <section id="servicios-section" class="services-section">
 
+    <div class="video-grid" aria-label="Videos de servicios especializados">
+        <div class="video-card">
+            <iframe
+                    src="https://www.youtube.com/embed/a06rm4RD69A?si=Bf1bBZU3BGzbvAVI"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-card">
+            <iframe
+                    src="https://www.youtube.com/embed/7PH1xagxlBU?si=jb9WiO4MJyz52r6y"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
   <h2 class="services-title">
     {{ langService.translate('serviciosEspecializados') }}
   </h2>
-
-  <div class="video-grid" aria-label="Videos de servicios especializados">
-    <div class="video-card">
-      <iframe
-        src="https://www.youtube.com/embed/a06rm4RD69A?si=Bf1bBZU3BGzbvAVI"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <div class="video-card">
-      <iframe
-        src="https://www.youtube.com/embed/7PH1xagxlBU?si=jb9WiO4MJyz52r6y"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
 
   <div class="carousel-container">
     <button class="carousel-control prev" (click)="anterior()">
