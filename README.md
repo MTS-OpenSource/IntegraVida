@@ -1,143 +1,279 @@
-# IntegraVida Landing Page
+# IntegraVida
 
-Landing page for IntegraVida, a healthcare-focused web experience centered on diabetes care and patient contact. The project is built with Angular 21 and currently exposes a single-page landing flow designed for static deployment on GitHub Pages.
+> **Healthcare-focused web experience for diabetes care and patient engagement**
 
-## Tech Stack
+![TypeScript](https://img.shields.io/badge/TypeScript-50.5%25-3178c6?logo=typescript)
+![CSS](https://img.shields.io/badge/CSS-27.1%25-1572b6?logo=css3)
+![HTML](https://img.shields.io/badge/HTML-22.4%25-e34c26?logo=html5)
+![Angular](https://img.shields.io/badge/Angular-21-dd0031?logo=angular)
+![License](https://img.shields.io/badge/License-Open%20Source-green)
 
-- Angular 21 with standalone components
-- TypeScript
-- HTML templates and component-scoped CSS
-- Angular Router
-- Signals for lightweight state handling
-- GitHub Actions for GitHub Pages deployment
+---
 
-## Project focus
+## 📋 Descripción
 
-The current implementation is oriented around a simple landing experience with:
+IntegraVida es una plataforma web moderna diseñada para mejorar la experiencia de pacientes con diabetes y facilitar la comunicación entre profesionales de la salud y sus pacientes. El proyecto implementa una landing page profesional de una sola página (SPA) construida con **Angular 21** y desplegada automáticamente en **GitHub Pages**.
 
-- A root route that loads the landing directly
-- Reusable UI sections for navigation, hero, and contact
-- A lightweight language service with Spanish and English labels
-- Static deployment support for GitHub Pages
+### Características Principales
 
-## Current structure
+- ✅ **Landing page responsiva** con navegación fluida
+- ✅ **Soporte multiidioma** (Español e Inglés)
+- ✅ **Componentes reutilizables** y mantenibles
+- ✅ **Despliegue automático** con GitHub Actions
+- ✅ **Optimizado para GitHub Pages** con estrategia de enrutamiento SPA
+- ✅ **Diseño moderno** con componentes de interfaz profesionales
 
-```text
+---
+
+## 🛠️ Stack Tecnológico
+
+| Tecnología | Versión | Descripción |
+|---|---|---|
+| **Angular** | 21.1.0 | Framework principal con componentes standalone |
+| **TypeScript** | 5.9.2 | Lenguaje de tipado estático |
+| **RxJS** | 7.8.0 | Programación reactiva |
+| **Angular Router** | 21.1.0 | Enrutamiento de SPA |
+| **Angular Signals** | 21.1.0 | Gestión de estado ligera |
+| **Vite** | - | Build tool moderno |
+| **Vitest** | 4.0.8 | Testing framework |
+| **FontAwesome** | 7.2.0 | Biblioteca de iconos |
+| **Express.js** | 5.1.0 | Servidor (SSR) |
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
 IntegraVida/
 ├── .github/
 │   └── workflows/
-│       └── static.yml                 # Automatic deploy to GitHub Pages
-├── public/                            # Static public assets
+│       └── static.yml                 # Pipeline de despliegue automático en GitHub Pages
+├── public/                            # Activos estáticos públicos
 ├── src/
 │   ├── app/
-│   │   ├── components/
-│   │   │   ├── about/
-│   │   │   ├── contact/
-│   │   │   ├── hero/
-│   │   │   ├── services/
-│   │   │   └── testimonials/
+│   │   ├── components/               # Componentes reutilizables
+│   │   │   ├── about/                # Sección "Acerca de"
+│   │   │   ├── contact/              # Formulario de contacto
+│   │   │   ├── hero/                 # Sección principal
+│   │   │   ├── services/             # Descripción de servicios
+│   │   │   └── testimonials/         # Testimonios de pacientes
 │   │   ├── core/
 │   │   │   └── services/
-│   │   │       └── lenguage.service.ts
-│   │   ├── pages/
-│   │   │   ├── landing/
+│   │   │       └── language.service.ts # Servicio de internacionalización
+│   │   ├── pages/                    # Páginas de la aplicación
+│   │   │   ├── landing/              # Página de inicio
 │   │   │   └── pages/
-│   │   ├── shared/
-│   │   │   ├── button/
-│   │   │   ├── footer/
-│   │   │   └── navbar/
-│   │   ├── app.config.ts
-│   │   ├── app.routes.ts
-│   │   └── app.ts
-│   ├── assets/                        # Images and SVG assets used by the landing
-│   ├── index.html
-│   ├── main.ts
-│   └── styles.css
-├── angular.json
-├── package.json
-└── README.md
+│   │   ├── shared/                   # Componentes compartidos
+│   │   │   ├── button/               # Botones reutilizables
+│   │   │   ├── footer/               # Pie de página
+│   │   │   └── navbar/               # Barra de navegación
+│   │   ├── app.config.ts             # Configuración global
+│   │   ├── app.routes.ts             # Definición de rutas
+│   │   └── app.ts                    # Componente raíz
+│   ├── assets/                       # Imágenes y recursos SVG
+│   ├── index.html                    # Template HTML principal
+│   ├── main.ts                       # Punto de entrada
+│   └── styles.css                    # Estilos globales
+├── angular.json                      # Configuración Angular CLI
+├── package.json                      # Dependencias del proyecto
+├── tsconfig.json                     # Configuración TypeScript
+└── README.md                         # Este archivo
 ```
 
-## Routing
+---
 
-The app is configured so the root path loads the landing directly:
+## 🌐 Enrutamiento
 
-- `/` -> landing page
+La aplicación utiliza una estrategia de enrutamiento optimizada para GitHub Pages:
 
-This avoids redirect issues and works better with GitHub Pages static hosting.
+| Ruta | Descripción |
+|---|---|
+| `/` | Página de inicio (Landing) |
 
-## Internationalization
+Esta configuración evita problemas de redirección y funciona perfectamente con el hosting estático de GitHub Pages.
 
-The project currently includes a simple in-app language service:
+---
 
-- Default language: Spanish
-- Secondary language: English
-- Translation values are defined in `src/app/core/services/lenguage.service.ts`
+## 🌍 Internacionalización (i18n)
 
-## Local development
+El proyecto incluye un servicio de idiomas ligero e integrado:
 
-Install dependencies:
+| Idioma | Estado |
+|---|---|
+| 🇪🇸 Español | Idioma por defecto |
+| 🇺🇸 English | Idioma secundario |
+
+**Ubicación:** `src/app/core/services/language.service.ts`
+
+Los servicios de traducción se pueden actualizar fácilmente para agregar más idiomas.
+
+---
+
+## 🚀 Primeros Pasos
+
+### Requisitos Previos
+
+- **Node.js** ≥ 18.x
+- **npm** ≥ 10.8.2
+- **Angular CLI** ≥ 21.x
+
+### Instalación
 
 ```bash
+# Clonar el repositorio
+git clone https://github.com/MTS-OpenSource/IntegraVida.git
+cd IntegraVida
+
+# Instalar dependencias
 npm install
 ```
 
-Start the dev server:
+### Desarrollo Local
 
 ```bash
+# Iniciar servidor de desarrollo
 npm start
 ```
 
-Then open:
+La aplicación estará disponible en:
 
-```text
+```
 http://localhost:4200
 ```
 
-## Production build
+El servidor recargará automáticamente los cambios mientras desarrollas.
 
-Run the standard production build:
+### Testing
 
 ```bash
-npx ng build
+# Ejecutar tests con Vitest
+npm test
 ```
 
-The output is generated in:
+---
 
-```text
-dist/IntegraVida
+## 📦 Construcción para Producción
+
+```bash
+# Compilación optimizada para producción
+npm run build
 ```
 
-## GitHub Pages deployment
+Los archivos compilados se generarán en:
 
-The repository is configured to deploy with GitHub Actions using:
+```
+dist/IntegraVida/
+```
 
-- `.github/workflows/static.yml`
+### Build para GitHub Pages
 
-The workflow:
+El proceso está automatizado. Para desplegar a producción:
 
-- installs dependencies with `npm ci`
-- builds the app for GitHub Pages
-- publishes the static browser output
-- creates a `404.html` fallback for SPA routing
+```bash
+# Push a la rama principal (automáticamente dispara el workflow)
+git push origin main
+```
 
-To trigger deployment:
+O a la rama de desarrollo:
 
 ```bash
 git push origin development
 ```
 
-or:
+---
 
-```bash
-git push origin main
-```
+## 🔄 Despliegue Automático con GitHub Actions
 
-In GitHub repository settings, Pages should be configured to use:
+El proyecto está configurado para desplegar automáticamente en GitHub Pages mediante GitHub Actions.
 
-- `Source` -> `GitHub Actions`
+### Workflow Automático (`.github/workflows/static.yml`)
 
-## Notes
+El workflow ejecuta automáticamente:
 
-- The project currently includes additional sections and shared components that can be wired into the landing as it evolves.
-- Since GitHub Pages is static hosting, deployment is configured around a static output instead of a server runtime.
+1. ✅ Instala las dependencias (`npm ci`)
+2. ✅ Compila la aplicación para GitHub Pages
+3. ✅ Publica los archivos estáticos
+4. ✅ Crea un archivo `404.html` para enrutamiento SPA
+5. ✅ Despliega en GitHub Pages
+
+### Configuración Requerida
+
+En la configuración del repositorio de GitHub, asegúrate de:
+
+1. Ir a **Settings** → **Pages**
+2. Configurar **Source** → **GitHub Actions**
+3. El despliegue se ejecutará automáticamente con cada push a `main` o `development`
+
+### Ver Despliegue en Vivo
+
+🌐 **URL en Vivo:** https://mts-opensource.github.io/IntegraVida/
+
+---
+
+## 📝 Scripts Disponibles
+
+| Script | Descripción |
+|---|---|
+| `npm start` | Inicia servidor de desarrollo (puerto 4200) |
+| `npm run build` | Compilación optimizada para producción |
+| `npm run watch` | Build en modo watch (desarrollo) |
+| `npm test` | Ejecuta tests con Vitest |
+| `npm run ng` | Ejecuta comandos de Angular CLI |
+
+---
+
+## 🎯 Mejoras Futuras
+
+- [ ] Migración completa a TypeScript strict mode
+- [ ] Implementación de más componentes de UI
+- [ ] Testing E2E con Cypress
+- [ ] Integración de backend API
+- [ ] Análisis de performance y SEO
+- [ ] Soporte para más idiomas
+- [ ] Modo dark/light theme
+- [ ] Progressive Web App (PWA)
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de código abierto y pertenece a la organización **MTS-OpenSource**.
+
+---
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+---
+
+## 📞 Contacto y Soporte
+
+- 📧 Organización: [MTS-OpenSource](https://github.com/MTS-OpenSource)
+- 🐛 Reportar bugs: [Issues](https://github.com/MTS-OpenSource/IntegraVida/issues)
+- 💬 Discusiones: [GitHub Discussions](https://github.com/MTS-OpenSource/IntegraVida/discussions)
+
+---
+
+## 📚 Recursos Adicionales
+
+- [Documentación Angular](https://angular.io/docs)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [GitHub Pages Guide](https://docs.github.com/en/pages)
+- [Angular CLI Reference](https://angular.io/cli)
+
+---
+
+<div align="center">
+
+**Hecho con ❤️ por MTS-OpenSource**
+
+[⬆ Volver arriba](#integravida)
+
+</div>
